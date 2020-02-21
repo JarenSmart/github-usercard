@@ -71,6 +71,7 @@ const bio = document.createElement('p');
 //content
 newImg.src = data.avatar_url;
 
+
 //classes
 card.classList.add('card');
 cardinfo.classList.add('card-info');
