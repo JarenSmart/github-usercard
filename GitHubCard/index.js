@@ -60,14 +60,20 @@ const followersArray = [];
 const card = document.createElement('div');
 const newImg = document.createElement('img');
 const cardInfo = document.createElement('div');
+const name = document.createElement('h3');
+const username = document.createElement('p');
+const location = document.createElement('p');
+const profile = document.createElement('p');
+const followers = document.createElement('p');
+const following = document.createElement('p');
+const bio = document.createElement('p');
 
+//content
+newImg.src = data.avatar_url;
 
 //classes
 card.classList.add('card');
 cardinfo.classList.add('card-info');
-
-//content
-newImg.src = data.avatar_url;
 
 //structure and appending to DOM
 card.appendChild(newImg);
