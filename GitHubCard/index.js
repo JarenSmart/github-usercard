@@ -3,14 +3,15 @@
            https://api.github.com/users/<your name>
 */
 
-axios.get('https://api.github.com/users/JarenSmart')
-  .then(((response) => {
+axios
+  .get("https://api.github.com/users/JarenSmart")
+  .then(response => {
     console.log(response);
     cardItem.append(userCard(response.data));
   })
   .catch(err => {
-  console.log("There was an error: ", err);
-})
+    console.log("There was an error: ", err);
+  });
 
 /* Step 2: Inspect and study the data coming back, this is YOUR 
    github info! You will need to understand the structure of this 
@@ -55,31 +56,28 @@ const followersArray = [];
 
 */
 
-
 //elements
-const card = document.createElement('div');
-const newImg = document.createElement('img');
-const cardInfo = document.createElement('div');
-const name = document.createElement('h3');
-const username = document.createElement('p');
-const location = document.createElement('p');
-const profile = document.createElement('p');
-const followers = document.createElement('p');
-const following = document.createElement('p');
-const bio = document.createElement('p');
+const card = document.createElement("div");
+const newImg = document.createElement("img");
+const cardInfo = document.createElement("div");
+const name = document.createElement("h3");
+const username = document.createElement("p");
+const location = document.createElement("p");
+const profile = document.createElement("p");
+const followers = document.createElement("p");
+const following = document.createElement("p");
+const bio = document.createElement("p");
 
 //content
 newImg.src = data.avatar_url;
 
-
 //classes
-card.classList.add('card');
-cardinfo.classList.add('card-info');
+card.classList.add("card");
+cardinfo.classList.add("card-info");
 
 //structure and appending to DOM
 card.appendChild(newImg);
-card.appendChild(cardInfo)
-
+card.appendChild(cardInfo);
 
 /* List of LS Instructors Github username's: 
   tetondan
